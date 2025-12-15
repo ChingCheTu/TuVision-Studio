@@ -1,0 +1,408 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>TuVision</class>
+ <widget class="QMainWindow" name="TuVision">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1037</width>
+    <height>527</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>TuVision  </string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QGroupBox" name="groupBox">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>10</y>
+      <width>501</width>
+      <height>321</height>
+     </rect>
+    </property>
+    <property name="title">
+     <string>Input information</string>
+    </property>
+    <widget class="QTabWidget" name="tabWidgetInput">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>20</y>
+       <width>481</width>
+       <height>291</height>
+      </rect>
+     </property>
+     <property name="currentIndex">
+      <number>-1</number>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QGroupBox" name="groupBox_7">
+    <property name="geometry">
+     <rect>
+      <x>520</x>
+      <y>330</y>
+      <width>501</width>
+      <height>151</height>
+     </rect>
+    </property>
+    <property name="title">
+     <string>Analysis Info</string>
+    </property>
+    <widget class="QTextEdit" name="textResultInfo">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>20</y>
+       <width>481</width>
+       <height>121</height>
+      </rect>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QGroupBox" name="groupBox_3">
+    <property name="geometry">
+     <rect>
+      <x>190</x>
+      <y>330</y>
+      <width>111</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="title">
+     <string>Frame count</string>
+    </property>
+    <widget class="QLineEdit" name="lineFrameCount">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>20</y>
+       <width>91</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="contextMenuPolicy">
+      <enum>Qt::DefaultContextMenu</enum>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QGroupBox" name="groupBox_5">
+    <property name="geometry">
+     <rect>
+      <x>310</x>
+      <y>330</y>
+      <width>201</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="title">
+     <string>File Name</string>
+    </property>
+    <widget class="QLineEdit" name="lineFileName">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>20</y>
+       <width>191</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="contextMenuPolicy">
+      <enum>Qt::NoContextMenu</enum>
+     </property>
+     <property name="layoutDirection">
+      <enum>Qt::LeftToRight</enum>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QGroupBox" name="groupBox_4">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>330</y>
+      <width>171</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="title">
+     <string>Operation Control</string>
+    </property>
+    <widget class="QPushButton" name="btnPlatyVid">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>20</y>
+       <width>71</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Play</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="btnPauseVid">
+     <property name="geometry">
+      <rect>
+       <x>90</x>
+       <y>20</y>
+       <width>71</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Pause</string>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QGroupBox" name="groupBox_2">
+    <property name="geometry">
+     <rect>
+      <x>520</x>
+      <y>10</y>
+      <width>501</width>
+      <height>321</height>
+     </rect>
+    </property>
+    <property name="title">
+     <string>Analysis Result</string>
+    </property>
+    <widget class="QTabWidget" name="tabWidgetResult">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>20</y>
+       <width>481</width>
+       <height>291</height>
+      </rect>
+     </property>
+     <property name="currentIndex">
+      <number>-1</number>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QGroupBox" name="Analysis_group">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>390</y>
+      <width>161</width>
+      <height>91</height>
+     </rect>
+    </property>
+    <property name="title">
+     <string>Analysis</string>
+    </property>
+    <widget class="QComboBox" name="comboAnalysis">
+     <property name="enabled">
+      <bool>true</bool>
+     </property>
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>20</y>
+       <width>141</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="editable">
+      <bool>true</bool>
+     </property>
+     <property name="currentText">
+      <string>AWB analysis</string>
+     </property>
+     <item>
+      <property name="text">
+       <string>AWB analysis</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Grayscale analysis</string>
+      </property>
+     </item>
+    </widget>
+    <widget class="QPushButton" name="start_analysis_btn">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>50</y>
+       <width>141</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Start analysis</string>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QGroupBox" name="Enhancement_group">
+    <property name="geometry">
+     <rect>
+      <x>180</x>
+      <y>390</y>
+      <width>161</width>
+      <height>91</height>
+     </rect>
+    </property>
+    <property name="title">
+     <string>Enhancement</string>
+    </property>
+    <widget class="QComboBox" name="comboEnhancement">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>20</y>
+       <width>141</width>
+       <height>22</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="start_enhancement_btn">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>50</y>
+       <width>141</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Start Enhancement</string>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QGroupBox" name="Utilitie_group">
+    <property name="geometry">
+     <rect>
+      <x>350</x>
+      <y>390</y>
+      <width>161</width>
+      <height>91</height>
+     </rect>
+    </property>
+    <property name="title">
+     <string>Utilities</string>
+    </property>
+    <widget class="QComboBox" name="comboUtilitie">
+     <property name="enabled">
+      <bool>true</bool>
+     </property>
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>20</y>
+       <width>141</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <property name="editable">
+      <bool>true</bool>
+     </property>
+     <property name="currentText">
+      <string>RGB Split</string>
+     </property>
+     <item>
+      <property name="text">
+       <string>RGB Split</string>
+      </property>
+     </item>
+    </widget>
+    <widget class="QPushButton" name="start_tool_btn">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>50</y>
+       <width>141</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Start Utilities</string>
+     </property>
+    </widget>
+   </widget>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1037</width>
+     <height>25</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menudasdasd">
+    <property name="title">
+     <string>Export</string>
+    </property>
+    <addaction name="action_save_result"/>
+   </widget>
+   <widget class="QMenu" name="menuEnhancement">
+    <property name="title">
+     <string>File</string>
+    </property>
+    <addaction name="action_load_data"/>
+    <addaction name="action_clear_data"/>
+   </widget>
+   <addaction name="menuEnhancement"/>
+   <addaction name="menudasdasd"/>
+  </widget>
+  <action name="actionasdsd">
+   <property name="text">
+    <string>asdsd</string>
+   </property>
+  </action>
+  <action name="actionasds">
+   <property name="text">
+    <string>asds</string>
+   </property>
+  </action>
+  <action name="actionadsad">
+   <property name="text">
+    <string>adsad</string>
+   </property>
+  </action>
+  <action name="actionLoad_File">
+   <property name="text">
+    <string>Load File</string>
+   </property>
+  </action>
+  <action name="actionClear_File">
+   <property name="text">
+    <string>Clear File</string>
+   </property>
+  </action>
+  <action name="action_load_data">
+   <property name="text">
+    <string>Load Data</string>
+   </property>
+  </action>
+  <action name="action_save_result">
+   <property name="text">
+    <string>Save Result</string>
+   </property>
+  </action>
+  <action name="action_clear_data">
+   <property name="text">
+    <string>Clear Data</string>
+   </property>
+  </action>
+  <action name="actionColor_Picker">
+   <property name="text">
+    <string>Color Picker</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

@@ -1,0 +1,22 @@
+# Python 暫存檔
+__pycache__/
+*.py[cod]
+
+# 環境變數與金鑰 (絕對不能上傳)
+.env
+api_key.txt
+
+# IDE 設定檔
+.vscode/
+.idea/
+
+# 虛擬環境
+venv/
+env/
+Anaconda/
+
+# 打包產物
+build/
+dist/
+*.spec
+Input/

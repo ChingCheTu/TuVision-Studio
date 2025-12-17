@@ -2,76 +2,77 @@
 
 ![Python](https://img.shields.io/badge/Python-3.9+-blue.svg)
 ![PyQt5](https://img.shields.io/badge/GUI-PyQt5-green.svg)
-![Status](https://img.shields.io/badge/Status-Prototype%20v0.1.0-orange)
-![Focus](https://img.shields.io/badge/Focus-Automotive%20%7C%20SoC%20Architecture-red)
+![Status](https://img.shields.io/badge/Status-Phase%201%20Prototype-orange)
+![Focus](https://img.shields.io/badge/Focus-ISP%20Algorithm%20%7C%20SoC%20Architecture-red)
 
-> **Bridging Classic Computer Vision with Generative AI for Automotive Excellence.**
+> **Next-Generation ISP Toolchain: From Analysis to AI-Assisted Tuning.**
 >
-> 結合傳統 ISP 影像處理與 Google Gemini LLM 的下一代畫質調校平台。
+> 專為 ISP 演算法開發與 SoC 架構驗證打造的智慧化調校平台。
 
 ---
 
-## 📺 Demo Preview (成品展示)
+## 📸 Project Showcase (目前進度)
 
-<!-- 之後錄好 YouTube 影片或做好 GIF，把連結貼在這裡 -->
-<!-- 範例寫法：[![Watch the video](https://img.youtube.com/vi/你的影片ID/maxresdefault.jpg)](https://youtu.be/你的影片ID) -->
+**Current Version: v0.1.0 (Phase 1 Analysis)**
 
-*目前版本展示 (Phase 1 Analysis):*
-*(建議這裡放一張軟體介面的截圖，檔案放在 assets 資料夾內)*
-`![Main Interface](./assets/screenshot_main.png)`
+![Phase 1 Screenshot](./assets/screenshot_phase1.png)
+*(▲ Phase 1 介面展示：支援 Splitter 響應式佈局、深色暗房模式、ROI 選取與即時 AWB 數據分析)*
 
 ---
 
-## 📖 Project Overview (專案簡介)
+## 📖 Project Overview (專案願景)
 
-**TuVision Studio** 是一套針對車用影像 (Automotive Imaging) 與高階 SoC 架構設計的一站式開發工具。旨在解決傳統 ISP 調校過於依賴人工試誤 (Trial-and-Error) 的痛點，並整合學術界的影像融合演算法。
+**TuVision Studio** 是一套通用的 **ISP (Image Signal Processing)** 開發驗證工具。
+
+在晶片設計 (SoC) 與演算法開發流程中，往往缺乏一套能整合「客觀畫質分析 (IQ Analysis)」、「流程模擬 (Pipeline Simulation)」與「參數調校 (Tuning)」的統一平台。
+
+本專案旨在解決此斷層，透過 Python 全端開發，打造一個**可擴充 (Scalable)** 的架構。不僅提供畫質檢測功能，更作為 **Soft-ISP** 載體，協助演算法工程師加速 IP 模組的驗證與落地。
 
 ### 核心能力 (Key Capabilities):
-1.  **Automated IQ Analysis:** 自動化分析圖表與數據 (Delta E, SNR)。
-2.  **AI-Assisted Tuning:** 利用 LLM (Google Gemini) 實現 "Text-to-Parameter" 的直覺式調校。
-3.  **Research-to-Engineering:** 將學術發表的 Image Fusion 演算法落地整合至 GUI 平台。
+1.  **Modular GUI Architecture:** 採用 PyQt5 建構響應式介面，模擬專業級 EDA/Tuning Tool 的操作體驗 (Splitter, Docking layout)。
+2.  **Algorithm Validation:** 提供 "Research-to-Engineering" 的驗證環境，支持 MATLAB/Python 演算法的移植與視覺化。
+3.  **AI Integration:** 實驗性導入 LLM (Google Gemini)，探索 "Text-to-Parameter" 的智慧調校可能性。
 
 ---
 
-## 🛠 Features (功能模組)
+## 🛠 Features & Roadmap (功能路線圖)
 
-### 🔴 Phase 1: IQ Analysis Bot (智慧畫質檢測) - *Current v0.1.0*
-- [x] 支援 DNG/RAW/JPG 影像讀取與 EXIF 解析。
-- [x] 自動偵測 Macbeth ColorChecker (24色卡)。
-- [x] 計算 **Delta E (76/2000)** 色準數據。
-- [x] 視覺化 CIE Lab 色度圖與 SNR 分析。
+### 🔴 Phase 1: IQ Analysis Module (已完成 v0.1.0)
+建立穩定的影像輸入與分析基礎，作為 ISP Pipeline 的 Input/Output 檢測端。
+- [x] **Professional UI:** 實作左側固定寬度、右側自適應延伸 (Responsive) 的專業佈局。
+- [x] **Advanced Viewer:** 支援 Keep Aspect Ratio (等比縮放)、Anti-aliasing (平滑渲染) 與深色模式。
+- [x] **ROI Inspection:** 支援 Region of Interest 選取與局部細節檢視。
+- [x] **Statistics Monitor:** 即時計算 RGB 平均值與 AWB Gain 相關數據。
+- [x] **Media Support:** 支援多種影像格式讀取與 Frame 序列播放控制。
 
-### 🟡 Phase 2: AI-ISP Tuning Copilot (開發中)
-- [ ] **Soft-ISP Pipeline:** 模擬 BLC -> Demosaic -> CCM -> Gamma 流程。
-- [ ] **Generative AI Integration:** 串接 Google Gemini API，提供畫質診斷報告。
-- [ ] **Natural Language Tuning:** 輸入「讓膚色暖一點」，自動轉換為 CCM 矩陣參數。
+### 🟡 Phase 2: Tuning & Simulation (開發中)
+模擬 ISP Pipeline 的參數調校過程。
+- [ ] **Tuning Interface:** 實作傳統 ISP 模組 (BLC, CCM, Gamma) 的參數滑桿控制。
+- [ ] **AI Copilot:** 整合 Google Gemini API，輔助使用者進行直覺式的參數調整。
+- [ ] **Pipeline Switching:** 模擬 SoC 內部切換 Hard-ISP 與 Neural-ISP 路徑的架構。
 
-### 🟢 Phase 3: R&D Lab (研發實驗室)
-- [ ] **Advanced Sensor Fusion:** 整合開發者發表的兩篇期刊論文演算法。
-- [ ] **Algorithm Validation:** 比較傳統 ISP 與自研 Fusion 算法的差異 (Split View)。
-- [ ] **HDR & Dehazing:** 車用場景的特殊影像增強。
+### 🟢 Phase 3: Algorithm R&D Lab (規劃中)
+專注於前瞻演算法的開發、移植與驗證 (Post-Processing Unit)。
+- [ ] **Legacy Code Porting (重點):**
+    -   將開發者發表的 **Image Fusion (影像融合)** 期刊論文演算法，從 **MATLAB 移植至 Python**。
+    -   驗證其在 Python 環境下的效能與畫質表現。
+- [ ] **Computational Module:** 模擬 SoC 後端的 Multi-Exposure HDR 或 Multi-Sensor Fusion 加速單元。
 
 ---
 
 ## 💻 Tech Stack (技術堆疊)
 
-*   **Core:** Python 3.9
-*   **GUI:** PyQt5 (Qt Designer)
-*   **Computer Vision:** OpenCV (cv2), NumPy, Pillow, Rawpy
-*   **Color Science:** colour-science, Matplotlib
-*   **AI Engine:** Google Generative AI (Gemini API)
+*   **Language:** Python 3.9
+*   **GUI Framework:** PyQt5 (Qt Designer, Custom GraphicsView)
+*   **Image Processing:** OpenCV, NumPy
 *   **Version Control:** Git / GitHub
 
 ---
 
-## 🚀 Getting Started (如何執行)
+## 👨‍💻 About the Developer
 
-### Prerequisites (環境需求)
-請確保安裝 Anaconda 或 Python 3.9+。
+**Benny Tu**
+*   **Focus:** ISP Algorithm Design, SoC Architecture, Toolchain Development
+*   **Background:** 具備影像融合 (Image Fusion) 之學術研究背景，致力於將演算法理論轉化為工程落地應用。
 
-### Installation (安裝步驟)
-
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/ChingCheTu/TuVision-Studio.git
-   cd TuVision-Studio
+---

@@ -324,7 +324,7 @@
         <property name="geometry">
          <rect>
           <x>10</x>
-          <y>20</y>
+          <y>10</y>
           <width>271</width>
           <height>61</height>
          </rect>
@@ -611,13 +611,13 @@
         <property name="geometry">
          <rect>
           <x>290</x>
-          <y>20</y>
+          <y>10</y>
           <width>881</width>
-          <height>781</height>
+          <height>391</height>
          </rect>
         </property>
         <property name="title">
-         <string>Visual Preview</string>
+         <string>Original image</string>
         </property>
         <widget class="QGraphicsView" name="graphicsView">
          <property name="geometry">
@@ -625,7 +625,7 @@
            <x>10</x>
            <y>20</y>
            <width>861</width>
-           <height>751</height>
+           <height>361</height>
           </rect>
          </property>
         </widget>
@@ -672,6 +672,29 @@
            <y>20</y>
            <width>251</width>
            <height>341</height>
+          </rect>
+         </property>
+        </widget>
+       </widget>
+       <widget class="QGroupBox" name="groupBox_10">
+        <property name="geometry">
+         <rect>
+          <x>290</x>
+          <y>400</y>
+          <width>881</width>
+          <height>391</height>
+         </rect>
+        </property>
+        <property name="title">
+         <string>After Tuning Image</string>
+        </property>
+        <widget class="QGraphicsView" name="graphicsView_2">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>20</y>
+           <width>861</width>
+           <height>361</height>
           </rect>
          </property>
         </widget>
